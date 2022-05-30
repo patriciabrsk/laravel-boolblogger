@@ -1,5 +1,12 @@
 <template>
-    <div>
+    <div class="row">
+        <div class="col-12">
+            <router-link :to="{name: 'about-us', params: { userId: 123 } }"></router-link>
+        </div>
+        <div class="col-12">
+            <router-view></router-view>
+        </div>
+
         <Post v-for="(post, index) in posts" :key="index" :post="post"/>
         <!-- <nav aria-label="Page navigation">
             <ul class="pagination">
@@ -14,7 +21,6 @@
                 </li>
             </ul>
         </nav> -->
-
     </div>
 </template>
 
